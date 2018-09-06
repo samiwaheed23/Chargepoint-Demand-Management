@@ -1,6 +1,6 @@
 # Chargepoint-Demand-Management
-### Author: Sami Waheed
-### Date: September 2018
+##### Author: Sami Waheed
+##### Date: September 2018
 
 ## Description:
 This program accesses Chargepoint's API for Demand Management calls. This is only a class definition that contains helpful functions to proceed with controlling the power sent to Chargepoint's electric vehicle charging stations. I used this to conduct smart charging for a group of charging station at a site. For security purposes I have not included the algorithm or any techniques utilized, so any implementations will need to be written according to the user's needs.
