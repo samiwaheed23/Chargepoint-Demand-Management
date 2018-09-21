@@ -128,27 +128,27 @@ class CP_levelload:
                 if currPower[i] < 1.8 and currPower[i] > 0:
                     currPower[i] = 1.8
 
-             # If Port1 = 0 and Port2 != 0, sets both to nonzero value to avoid issue
-             index = 0
-             while index < len(currPower):
-                 if currPower[index] == 0.0:
-                     if currPower[index + 1] != 0.0:
-                         currPower[index] = currPower[index + 1]
-                 else:
-                     if currPower[index + 1] == 0.0:
-                         currPower[index + 1] = currPower[index]
-                     index += 2
+            # If Port1 = 0 and Port2 != 0, sets both to nonzero value to avoid issue
+            index = 0
+            while index < len(currPower):
+                if currPower[index] == 0.0:
+                    if currPower[index + 1] != 0.0:
+                        currPower[index] = currPower[index + 1]
+                else:
+                    if currPower[index + 1] == 0.0:
+                        currPower[index + 1] = currPower[index]
+                    index += 2
 
-             # Set Max Powers Determined
-             index = 0
-             for i in ids:
-                 # Port 1
-                 setMaxPower(i, 0, currPower[index])
-                 index += 1
+            # Set Max Powers Determined
+            index = 0
+            for i in ids:
+                # Port 1
+                setMaxPower(i, 0, currPower[index])
+                index += 1
 
-                 # Port 2
-                 setMaxPower(i, 1, currPower[index])
-                 index += 1
+                # Port 2
+                setMaxPower(i, 1, currPower[index])
+                index += 1
             print ("Max Powers Set: ", currPower)
             print ("Total Power: ", sum(currPower))
             end = datetime.datetime.now()
